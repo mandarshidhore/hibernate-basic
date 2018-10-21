@@ -35,7 +35,7 @@ public class App {
 		// step 6 - commit transaction
 		tx1.commit();
 		
-		// retrieve Athlete
+		// retrieve Athlete and print its data
 		ath1 = session.get(Athlete.class, 6);
 		System.out.println(ath1);
 	}
