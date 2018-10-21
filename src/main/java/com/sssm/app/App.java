@@ -13,9 +13,11 @@ public class App {
 
 		// create and insert an Athlete
 		Athlete ath1 = new Athlete();
-		ath1.setId(3);
-		ath1.setFirstName("M3");
-		ath1.setLastName("S3");
+		int id = 4;
+		ath1.setId(id);
+		ath1.setFirstName("M" + id);
+		ath1.setLastName("S" + id);
+		ath1.setDoNotStore("++++ do not store ++++");
 
 		// step 1 - create configuration
 		// if .configure() is not set, it throws -> Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
@@ -32,6 +34,10 @@ public class App {
 		session.save(ath1);
 		// step 6 - commit transaction
 		tx1.commit();
+		
+		// retrieve Athlete
+		ath1 = session.get(Athlete.class, 6);
+		System.out.println(ath1);
 	}
 
 }
