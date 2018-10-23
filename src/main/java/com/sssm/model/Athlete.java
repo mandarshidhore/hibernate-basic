@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 
 // if schema already contains a table whose name matches POJO name, nothing additional needs to be done
-// if table generation is set to automatic and a different table name is desired than POJO name, modify annotation - e.g. @Entity(name="athelete_table") or @Table(name="athelete_table")
+// if table generation is set to auto and a different table name (than POJO name) is desired, modify annotation - e.g. @Entity(name="athelete_table") or @Table(name="athelete_table")
 @Entity
 public class Athlete {
 
